@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "description": "Ppx to help target multiple architecture",
   "scripts": {
-    "test": "eval $(dependencyEnv) && GL_BACKEND=native ocamlfind ocamlopt -dsource -pp refmt -ppx _build/native/src/app.native -impl test.re",
-    "postinstall": "eval $(dependencyEnv) && nopam && rebel",
+    "test": "eval $(dependencyEnv) && GL_BACKEND=native ocamlfind ocamlopt -dsource -pp refmt -ppx ./ppx_matchenv.exe -impl test.re",
+    "postinstall": "eval $(dependencyEnv) && nopam && ocamlfind ocamlopt -package compiler-libs.common -pp refmt -linkpkg -impl src/index.re -o ppx_matchenv.exe",
     "build": "npm run postinstall",
     "top": "eval $(dependencyEnv) && rtop",
     "env": "eval $(dependencyEnv) && env",
@@ -17,21 +17,7 @@
     "@opam-alpha/merlin": "^ 2.5.0",
     "dependency-env": "https://github.com/npm-ml/dependency-env.git",
     "nopam": "https://github.com/yunxing/nopam.git",
-    "reason": "https://github.com/facebook/reason.git",
-    "rebel-bin": "https://github.com/bsansouci/rebel-bin.git"
-  },
-  "rebel": {
-    "targets": [
-      {
-        "target": "native",
-        "engine": "native",
-        "entry": "src/index.re",
-        "unstable_flags": {
-          "compile": "-package compiler-libs.common",
-          "link": "-linkpkg -package compiler-libs.common"
-        }
-      }
-    ]
+    "reason": "https://github.com/facebook/reason.git"
   },
   "repository": {
     "type": "git",
