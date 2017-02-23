@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "Ppx to help target multiple architecture",
   "scripts": {
-    "test": "eval $(dependencyEnv) && GL_BACKEND=native ocamlfind ocamlopt -dsource -pp refmt -ppx ./ppx_matchenv.exe -impl test.re",
+    "test": "eval $(dependencyEnv) && GL_BACKEND=native ocamlfind ocamlopt -dsource -pp \"refmt --print binary\" -ppx ./ppx_matchenv.exe -impl test.re",
     "build": "npm run postinstall",
     "top": "eval $(dependencyEnv) && rtop",
     "env": "eval $(dependencyEnv) && env",
