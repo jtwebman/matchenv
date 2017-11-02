@@ -1,1 +1,3 @@
-./lib/bs/native/index.native "$@"
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+${DIR}/lib/bs/native/index.native "$@"
