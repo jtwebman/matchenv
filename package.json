@@ -6,7 +6,7 @@
     "postinstall": "bsb"
   },
   "bin": {
-    "matchenv": "lib/bs/native/index.native"
+    "matchenv": "matchenv"
   },
   "dependencies": {
     "bs-platform": "bsansouci/bsb-native#teset"
