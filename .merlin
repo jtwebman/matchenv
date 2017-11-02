@@ -38,3 +38,11 @@ FLG -w -30 -w -40 -open Native_Tar
 
 # User Custom config here
 
+
+####{BSB GENERATED: NO EDIT
+FLG -ppx /Users/benjamin/Desktop/matchenv/node_modules/bs-platform/bin/bsppx.exe
+FLG -no-alias-deps -color always
+FLG -w -30-40+6+7+27+32..39+44+45+101
+S src
+B lib/bs/native/src
+####BSB GENERATED: NO EDIT}

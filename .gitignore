@@ -1,3 +1,4 @@
 .jenga
 node_modules
 _build
+lib

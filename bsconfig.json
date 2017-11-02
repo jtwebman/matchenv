@@ -1,0 +1,9 @@
+{
+  "name": "matchenv",
+  "sources": "src",
+  "entries": [{
+    "kind": "native",
+    "main": "Index",
+    "type": "ppx"
+  }]
+}

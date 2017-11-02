@@ -3,21 +3,13 @@
   "version": "0.1.0",
   "description": "Ppx to help target multiple architecture",
   "scripts": {
-    "test": "eval $(dependencyEnv) && GL_BACKEND=native ocamlfind ocamlopt -dsource -pp \"refmt --print binary\" -ppx ./ppx_matchenv.exe -impl test.re",
-    "postinstall": "eval $(dependencyEnv) && nopam && ocamlfind ocamlopt -package compiler-libs.common -pp \"refmt --print binary\" -linkpkg -impl src/index.re -o ppx_matchenv.exe",
-    "build": "npm run postinstall",
-    "top": "eval $(dependencyEnv) && rtop",
-    "env": "eval $(dependencyEnv) && env",
-    "editor": "eval $(dependencyEnv) && $EDITOR .",
-    "whereisocamlmerlin": "eval $(dependencyEnv) && which ocamlmerlin-reason",
-    "mlre": "pbpaste | ./node_modules/reason/refmt_impl.native -parse ml -print re -use-stdin true -is-interface-pp false",
-    "reml": "pbpaste | ./node_modules/reason/refmt_impl.native -parse re -print ml -use-stdin true -is-interface-pp false"
+    "postinstall": "bsb"
+  },
+  "bin": {
+    "matchenv": "lib/bs/native/index.native"
   },
   "dependencies": {
-    "@opam-alpha/merlin": "^ 2.5.0",
-    "dependency-env": "npm-ml/dependency-env",
-    "nopam": "yunxing/nopam",
-    "reason": "facebook/reason"
+    "bs-platform": "bsansouci/bsb-native#teset"
   },
   "repository": {
     "type": "git",
