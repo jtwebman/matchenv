@@ -9,7 +9,7 @@
     "matchenv": "matchenv"
   },
   "dependencies": {
-    "bs-platform": "bsansouci/bsb-native#teset"
+    "bs-platform": "bsansouci/bsb-native"
   },
   "repository": {
     "type": "git",
