@@ -1,9 +1,10 @@
 {
   "name": "matchenv",
   "sources": "src",
+  "ocaml-dependencies": ["compiler-libs"],
   "entries": [{
-    "kind": "native",
-    "main": "Index",
-    "type": "ppx"
-  }]
+    "backend": "native",
+    "main-module": "Index",
+  }],
+  "namespace": true
 }
