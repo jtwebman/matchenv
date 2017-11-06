@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "Ppx to help target multiple architecture",
   "scripts": {
-    "postinstall": "bsb && cp lib/bs/native/index.native index.native"
+    "postinstall": "bsb && cp lib/bs/native/index.native matchenv"
   },
   "bin": {
     "matchenv": "matchenv"
