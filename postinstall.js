@@ -2,9 +2,9 @@ var exec = require('child_process').exec;
 var fs = require('fs');
 var path = require('path');
 
-exec(path.join(__dirname, 'node_modules', 'bs-platform', 'lib', 'bsb'), function(err, stdout, stderr) {
+exec(require.resolve(path.join('bs-platform', 'lib', 'bsb.exe')), function(err, stdout, stderr) {
   if (err) {
-    console.error(err);
+    console.error(stdout, stderr);
     return;
   }
   
