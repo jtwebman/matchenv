@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "Ppx to help target multiple architecture",
   "scripts": {
-    "postinstall": "bsb && cp lib/bs/native/index.native matchenv"
+    "postinstall": "node postinstall.js"
   },
   "dependencies": {
     "bs-platform": "bsansouci/bsb-native#2.1.1"
