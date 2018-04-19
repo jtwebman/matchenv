@@ -9,7 +9,7 @@ exec(require.resolve(path.join('bs-platform', 'lib', 'bsb.exe')), function(err, 
   }
   
   fs.createReadStream(path.join(__dirname, 'lib', 'bs', 'bytecode', 'matchenv'))
-    .pipe(fs.createWriteStream('matchenv'));
-  fs.chmodSync('matchenv', '755');
+    .pipe(fs.createWriteStream('matchenv.exe'));
+  fs.chmodSync('matchenv.exe', '755');
   console.log("Successfully built matchenv!");
 });
