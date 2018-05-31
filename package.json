@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "Ppx to help target multiple architecture",
   "scripts": {
+    "start": "bsb -make-world -w",
     "postinstall": "node postinstall.js"
   },
   "dependencies": {

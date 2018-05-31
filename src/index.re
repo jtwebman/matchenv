@@ -13,7 +13,7 @@ let getenv = (s) =>
   | Not_found => ""
   };
 
-let getenv_mapper = (argv) =>
+let getenv_mapper = (_) =>
   /* Our getenv_mapper only overrides the handling of expressions in the default mapper. */
   {
     ...default_mapper,
@@ -57,7 +57,7 @@ let getenv_mapper = (argv) =>
                     pc_lhs: {ppat_desc: Ppat_constant(Const_string(s, _))},
                     pc_rhs: {pexp_desc: Pexp_construct(moduleNameIdent, _)}
                   },
-                  ...rest
+                  ..._
                 ]
                   when s == expandedVar => moduleNameIdent
               | [
@@ -65,7 +65,7 @@ let getenv_mapper = (argv) =>
                     pc_lhs: {ppat_desc: Ppat_any},
                     pc_rhs: {pexp_desc: Pexp_construct(moduleNameIdent, _)}
                   },
-                  ...rest
+                  ..._
                 ] => moduleNameIdent
               | [_, ...rest] => findFirstMatch(rest)
               };
