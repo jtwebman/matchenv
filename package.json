@@ -1,6 +1,6 @@
 {
   "name": "matchenv",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Ppx to help target multiple architecture",
   "scripts": {
     "build": "bsb -make-world",
