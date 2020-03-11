@@ -3,15 +3,16 @@
   "version": "0.1.0",
   "description": "Ppx to help target multiple architecture",
   "scripts": {
+    "build": "bsb -make-world",
     "start": "bsb -make-world -w",
     "postinstall": "node postinstall.js"
-  },
-  "dependencies": {
-    "bs-platform": "bsansouci/bsb-native#3.2.0"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bsansouci/matchenv.git"
   },
-  "author": "bsansouci"
+  "author": "bsansouci",
+  "devDependencies": {
+    "bsb-native": "^4.0.1100"
+  }
 }
